@@ -1,26 +1,50 @@
 .btn {
   display: inline-flex;
-  padding: 10px 20px;
-
+  align-items: center;
+  justify-content: center;
+  padding: 17px 55px;
   color: $color-default-white;
-
-  background-color: $color-neon-blue;
+  background-color: $color-button-default;
+  outline: 1px solid $color-button-default;
   border: none;
   cursor: pointer;
-
   transition: opacity $trans-default;
 
-  &--red {
-    background-color: $color-torch-red;
+  &:hover,
+  &:focus {
+    outline: 1px solid $resolution-blue;
+    background-color: $color-background-default;
+    color: $resolution-blue;
+  }
+
+  &:active {
+    outline: 1px solid $resolution-blue;
+    background-color: $resolution-blue;
+    color: $color-default-white;
   }
 
   &:disabled {
     opacity: 0.5;
-
     pointer-events: none;
   }
 
-  @include hover-focus {
-    opacity: 0.8;
+  @include vp-1199 {
+    padding: 17px 48px;
+  }
+
+  @include vp-767 {
+    padding: 14px 35px;
+  }
+
+  &--form {
+    user-select: none;
+
+    @include vp-1199 {
+      padding: 20px;
+    }
+
+    @include vp-767 {
+      padding: 17px;
+    }
   }
 }

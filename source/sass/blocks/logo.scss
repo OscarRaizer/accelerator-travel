@@ -1,0 +1,16 @@
+.logo {
+  display: block;
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+}
+
+.logo__icon {
+  fill: #ffffff;
+}

@@ -1,5 +1,4 @@
 .next-tour {
-
   img {
     position: absolute;
     top: 0;
@@ -128,7 +127,6 @@
     justify-content: space-around;
 
     @include vp-1199 {
-      padding-top: 82px;
       justify-content: flex-start;
       width: 95px;
       padding: 8px 16px 9px 16px;

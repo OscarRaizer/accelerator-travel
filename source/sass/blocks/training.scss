@@ -1,0 +1,118 @@
+.training {
+  background-color: $color-background-default;
+
+  .container {
+    position: relative;
+    z-index: 3;
+  }
+
+  p {
+    margin-top: 0;
+    margin-bottom: 56px;
+    padding-right: 300px;
+    font-size: 16px;
+    line-height: 24px;
+
+    @include vp-1199 {
+      padding-right: 100px;
+      margin-bottom: 66px;
+    }
+
+    @include vp-767 {
+      padding-right: 0;
+      margin-bottom: 49px;
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+
+  h3 {
+    margin-top: 0;
+    margin-bottom: 41px;
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 21px;
+
+    @include vp-1199 {
+      margin-bottom: 32px;
+      font-size: 18px;
+      line-height: 18px;
+    }
+
+    @include vp-767 {
+      font-size: 16px;
+      line-height: 16px;
+    }
+  }
+}
+
+.training__title {
+  margin-bottom: 32px;
+
+  @include vp-1199 {
+    margin-bottom: 21px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 16px;
+  }
+}
+
+.training__slider {
+  display: grid;
+  margin-bottom: 52px;
+
+  @include vp-1199 {
+    margin-bottom: 41px;
+    width: 678px;
+  }
+
+  @include vp-767 {
+    width: 100%;
+    margin-bottom: 38px;
+  }
+}
+
+.training__slider-buttons-wrapper {
+  position: absolute;
+  top: -70px;
+  right: 0;
+  display: flex;
+  gap: 5px;
+  width: fit-content;
+
+  @include vp-1199 {
+    top: -59px;
+  }
+}
+
+.training__slider-next {
+  transform: rotate(180deg);
+}
+
+.training__list {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  border-bottom: 1px solid rgba(2, 101, 193, 0.2);
+
+  @media (max-width: 1199px) {
+    border: none;
+  }
+}
+
+.training__process {
+  margin-bottom: 80px;
+
+  @include vp-1199 {
+    margin-bottom: 75px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 16px;
+  }
+}

@@ -1,0 +1,202 @@
+.next-tour {
+
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    background-color: #108fd8;
+  }
+}
+
+.next-tour__text-content {
+  position: relative;
+  z-index: 10;
+
+  h3 {
+    color: $color-default-white;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 28px;
+    margin: 0;
+    margin-top: 23px;
+    margin-bottom: 37px;
+    width: 240px;
+
+    @include vp-767 {
+      margin: 17px 0 30px;
+      font-size: 20px;
+      line-height: 24px;
+      width: 225px;
+    }
+  }
+
+  dl {
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 0;
+    gap: 6px 55px;
+    grid-auto-flow: column;
+
+    @media (max-width: 1380px) {
+      gap: 6px 26px;
+    }
+
+    @include vp-1199 {
+      gap: 7px 28px;
+    }
+
+    @include vp-767 {
+      gap: 7px 12px;
+    }
+
+    dt {
+      color: $color-default-white;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: 100%;
+    }
+
+    dd {
+      color: $color-default-white;
+      font-size: 13px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 13px;
+      margin: 0;
+
+      @include vp-767 {
+        font-size: 12px;
+      }
+
+      &:first-of-type {
+        position: relative;
+        background-image: url("../../img/sprite/icon-star-border.svg");
+        width: 76px;
+        height: 14px;
+      }
+
+      .next-tour__rating {
+        position: absolute;
+        top: 0;
+        content: "";
+        display: block;
+        background-image: url("../../img/sprite/icon-star.svg");
+        width: 15px;
+        height: 13px;
+      }
+    }
+  }
+}
+
+.next-tour__inner-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  gap: 37px;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 12px;
+  color: $color-default-white;
+
+  @include vp-1199 {
+    gap: 11px;
+  }
+
+  @include vp-767 {
+    max-width: 200px;
+    flex-wrap: wrap;
+    justify-content: stretch;
+    gap: 13px;
+  }
+
+  .next-tour__place {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 6px;
+    background-color: $navy-blue;
+    padding: 8px 22px 9px 25px;
+    width: 107px;
+    justify-content: space-around;
+
+    @include vp-1199 {
+      padding-top: 82px;
+      justify-content: flex-start;
+      width: 95px;
+      padding: 8px 16px 9px 16px;
+    }
+
+    @include vp-767 {
+      order: 3;
+    }
+
+    &::before {
+      display: inline-block;
+      content: "";
+      background-image: url("../img/sprite/icon-pin.svg");
+      background-position: center;
+      width: 9px;
+      height: 12px;
+    }
+  }
+
+  .next-tour__days {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+    width: 76px;
+    justify-content: space-around;
+
+    @include vp-767 {
+      justify-content: flex-start;
+      gap: 13px;
+    }
+
+    &::before {
+      display: inline-block;
+      content: "";
+      background-image: url("../img/sprite/icon-sun.svg");
+      background-position: center;
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  .next-tour__nights {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+    width: 82px;
+    justify-content: space-around;
+
+    &::before {
+      display: inline-block;
+      content: "";
+      background-image: url("../img/sprite/icon-moon.svg");
+      background-position: center;
+      background-size: contain;
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
+
+.next-tour__overlay {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(143deg, rgba(15, 20, 41, 0.33) 0%, rgba(15, 20, 41, 0) 100%);
+}

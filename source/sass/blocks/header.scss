@@ -155,8 +155,13 @@
     }
 
     svg {
-      width: 144px;
-      height: 44px;
+      width: 205px;
+      height: 62px;
+
+      @include vp-1199 {
+        width: 144px;
+        height: 44px;
+      }
 
       @include vp-767 {
         width: 112px;

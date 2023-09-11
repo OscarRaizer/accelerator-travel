@@ -1,0 +1,144 @@
+.next-tours__container {
+  padding-top: 121px;
+  position: relative;
+
+  @include vp-1199 {
+    padding-top: 82px;
+  }
+
+  @include vp-767 {
+    padding-top: 66px;
+  }
+}
+
+.next-tours__title {
+  position: relative;
+  margin-bottom: 57px;
+
+  @include vp-1199 {
+    margin-bottom: 39px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 28px;
+  }
+
+  h2 {
+    margin: 0;
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 35px;
+    color: $color-elephant;
+
+    @include vp-1199 {
+      font-size: 25px;
+    }
+
+
+    @include vp-767 {
+      width: 156px;
+      font-size: 22px;
+      line-height: 22px;
+    }
+  }
+}
+
+.shadow-title {
+
+  span {
+    content: "";
+    display: block;
+    position: absolute;
+    font-size: 55px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 55px;
+    opacity: 0.03;
+    top: -15px;
+
+    @include vp-767 {
+      font-size: 26px;
+      line-height: 26px;
+      width: 256px;
+      overflow: hidden;
+    }
+  }
+}
+
+.next-tours__all-tours {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 16px;
+  letter-spacing: 0.64px;
+  text-transform: uppercase;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  gap: 12px;
+
+  @include vp-767 {
+    font-size: 14px;
+    line-height: 14px;
+    letter-spacing: 0.56px;
+    gap: 7px;
+  }
+
+  &::after {
+    content: "";
+    width: 12px;
+    height: 14px;
+    background-image: url("../img/sprite/icon-arrow-right.svg");
+    display: inline-block;
+    background-repeat: no-repeat;
+  }
+}
+
+
+.next-tours__slider {
+  margin-bottom: 52px;
+
+  @include vp-1199 {
+    width: 666px;
+    margin-bottom: 47px;
+  }
+
+  @include vp-767 {
+    width: 290px;
+    margin-bottom: 22px;
+  }
+}
+
+.next-tours__slide {
+  position: relative;
+  padding: 206px 20px 28px;
+
+  @include vp-767 {
+    padding-top: 197px;
+  }
+}
+
+.next-tours__slider-buttons-wrapper {
+  display: flex;
+  position: absolute;
+  top: -90px;
+  right: 0;
+  z-index: 50;
+  gap: 4px;
+
+  @include vp-1199 {
+    top: -73px;
+  }
+
+  @include vp-767 {
+    top: -69px;
+  }
+}
+
+.next-tours__slider-next {
+  rotate: 180deg;
+}

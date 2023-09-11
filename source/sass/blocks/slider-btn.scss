@@ -1,0 +1,29 @@
+.slider-btn {
+  display: flex;
+  width: 37px;
+  height: 35px;
+  background-color: $navy-blue;
+  align-items: center;
+  justify-content: center;
+
+  svg {
+    fill: $color-default-white;
+  }
+
+  &:hover {
+    background-color: $color-default-white;
+    border: 1px solid $resolution-blue;
+
+    svg {
+      fill: $resolution-blue;
+    }
+  }
+
+  &:active {
+    background-color: $resolution-blue;
+
+    svg {
+      fill: $color-default-white;
+    }
+  }
+}

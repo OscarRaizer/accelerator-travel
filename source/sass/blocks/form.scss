@@ -1,0 +1,176 @@
+.form {
+  background-color: #1a501a;
+  background-image: image-set("../img/form-background-desktop@1x.webp" 1x, "../img/form-background-desktop@1x.webp" 2x, "../img/form-background-desktop@1x.png" 1x, "../img/form-background-desktop@2x.png" 2x);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: $color-default-white;
+  text-align: center;
+
+  @include vp-1199 {
+    background-image: image-set("../img/form-background-tablet@1x.webp" 1x, "../img/form-background-tablet@1x.webp" 2x, "../img/form-background-tablet@1x.png" 1x, "../img/form-background-tablet@2x.png" 2x);
+  }
+
+  @include vp-767 {
+    background-image: image-set("../img/form-background-mobile@1x.webp" 1x, "../img/form-background-mobile@1x.webp" 2x, "../img/form-background-mobile@1x.png" 1x, "../img/form-background-mobile@2x.png" 2x);
+  }
+
+
+  .container {
+    padding-top: 312px;
+    padding-bottom: 307px;
+
+    @include vp-1199 {
+      padding-top: 197px;
+      padding-bottom: 183px;
+    }
+
+    @include vp-767 {
+      padding-top: 179px;
+      padding-bottom: 175px;
+    }
+
+    h2 {
+      font-size: 35px;
+      font-weight: 800;
+      line-height: 35px;
+      margin: 0;
+      margin-bottom: 16px;
+      padding-right: 17px;
+
+      @include vp-1199 {
+        font-size: 25px;
+        font-style: normal;
+        font-weight: 800;
+        line-height: 25px;
+        padding-right: 0;
+        margin-bottom: 18px;
+      }
+
+      @include vp-767 {
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 800;
+        line-height: 22px;
+        margin-bottom: 14px;
+      }
+    }
+
+    p {
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 24px;
+      margin: 0;
+      margin-bottom: 42px;
+      padding-right: 17px;
+
+      @include vp-1199 {
+        display: inline-block;
+        padding-right: 0;
+        width: 295px;
+        margin-bottom: 30px;
+      }
+
+      @include vp-767 {
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 18px;
+        margin-bottom: 25px;
+      }
+    }
+
+    form {
+      display: flex;
+      gap: 30px;
+      justify-content: center;
+      align-content: center;
+
+      @include vp-1199 {
+        flex-direction: column;
+        gap: 7px;
+        justify-content: center;
+        margin: 0 auto;
+        max-width: 266px;
+      }
+
+      @include vp-767 {
+        max-width: none;
+        width: 100%;
+      }
+
+      input {
+        width: 340px;
+        padding: 23px 30px;
+        border: none;
+
+        @include vp-1199 {
+          width: 100%;
+          padding: 16px 14px;
+          letter-spacing: -1.1px;
+        }
+
+        &::placeholder {
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 16px;
+          opacity: 0.5;
+        }
+
+        &:hover {
+          outline: 1px solid $color-button-default;
+
+          &::placeholder {
+            color: $color-button-default;
+            opacity: 1;
+          }
+        }
+
+        &:not(:disabled):focus,
+        &:not(:disabled):active {
+          &::placeholder {
+            opacity: 0;
+          }
+
+          outline: 1px solid #1c3374;
+        }
+
+        &:disabled {
+          border: 1px solid rgba(2, 102, 193, 0.1);
+        }
+      }
+
+
+      button {
+        width: 238px;
+        padding: 23px 9px;
+
+        @include vp-1199 {
+          justify-content: center;
+          width: 100%;
+          margin-top: 7px;
+          padding: 19px 9px;
+        }
+
+        @include vp-767 {
+          margin-top: 2px;
+          padding: 16px 9px;
+        }
+      }
+    }
+  }
+}
+
+.form__field {
+
+  &.is-invalid {
+
+    input,
+    input:hover,
+    input:focus {
+      outline: 1px solid #ff121f;
+    }
+  }
+}

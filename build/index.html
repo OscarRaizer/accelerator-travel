@@ -1226,6 +1226,78 @@
           </div>
         </div>
       </section>
+      <section class="form">
+        <div class="container">
+          <h2>Остались вопросы?</h2>
+          <p>Заполните форму и наш оператор свяжется с вами для консультации.</p>
+          <div class="form__wrapper" data-form-validate data-callback="base">
+            <form method="post" action="https://echo.htmlacademy.ru/">
+              <div class="form__field" data-on-input-validate data-required data-validate-type="text"
+                data-limitation="name">
+                <input type="text" aria-label="Имя" name="name" placeholder="Как к вам обращаться?" required>
+              </div>
+              <div class="form__field" data-on-input-validate data-required data-validate-type="phone">
+                <input type="tel" aria-label="Телефон" name="telephone" placeholder="Телефон" required>
+              </div>
+              <button class="form__button btn btn--form" type="submit">
+                Отправить
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+      <section class="contacts" id="contacts">
+        <div class="container">
+          <div class="contacts__text-content">
+            <div class="contacts__title shadow-title">
+              <h2>
+                Контакты
+              </h2>
+              <span>
+                Контакты
+              </span>
+            </div>
+            <p>
+              Свяжитесь с&nbsp;нами любым удобным для вас способом или приходите к&nbsp;нам в&nbsp;гости. Мы&nbsp;будем
+              рады поделиться увлекательными историями и&nbsp;подобрать для вас тур.
+            </p>
+            <dl>
+              <div class="contacts__item contacts__item--tel">
+                <dt>
+                  Телефон
+                </dt>
+                <dd>
+                  <a href="tel:+79837454545">
+                    8 983 745 45 45
+                  </a>
+                </dd>
+              </div>
+              <div class="contacts__item contacts__item--email">
+                <dt>
+                  E-mail
+                </dt>
+                <dd>
+                  <a href="mailto:info@lifetour.com">
+                    info@lifetour.com
+                  </a>
+                </dd>
+              </div>
+              <div class="contacts__item contacts__item--address">
+                <dt>
+                  Адрес
+                </dt>
+                <dd>
+                  г. Москва, пр-т Мира, д. 14, офис 101
+                </dd>
+              </div>
+            </dl>
+          </div>
+          <div class="contacts__map map">
+            <div id="map" class="map__wrapper">
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
     <footer class="footer">
       <div class="container">

@@ -1,0 +1,27 @@
+.map {
+  background-image: image-set("../img/background-map-desktop@1x.webp" 1x, "../img/background-map-desktop@2x.webp" 2x, "../img/background-map-desktop@1x.jpg" 1x, "../img/background-map-desktop@2x.jpg" 2x);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  @include vp-1199 {
+    background-image: image-set("../img/background-map-tablet@1x.webp" 1x, "../img/background-map-tablet@2x.webp" 2x, "../img/background-map-tablet@1x.jpg" 1x, "../img/background-map-tablet@2x.jpg" 2x);
+  }
+
+  @include vp-767 {
+    background-image: image-set("../img/background-map-mobile@1x.webp" 1x, "../img/background-map-mobile@2x.webp" 2x, "../img/background-map-mobile@1x.jpg" 1x, "../img/background-map-mobile@2x.jpg" 2x);
+  }
+}
+
+.map__wrapper {
+  width: 100%;
+  height: 324px;
+
+  @include vp-1199 {
+    height: 340px;
+  }
+
+  @include vp-767 {
+    height: 320px;
+  }
+}

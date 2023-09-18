@@ -3318,7 +3318,7 @@ body {
 
 .next-tour__text-content dl dd:first-of-type {
   position: relative;
-  background-image: url("../../img/sprite/icon-star-border.svg");
+  background-image: url("../img/sprite/icon-star-border.svg");
   width: 76px;
   height: 14px;
 }

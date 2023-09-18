@@ -4094,13 +4094,18 @@ p:not(:last-of-type) {
   align-content: center;
 }
 
-.form .container form input {
+.form .container form button {
+  width: 238px;
+  padding: 23px 9px;
+}
+
+.form__field input {
   width: 340px;
   padding: 23px 30px;
   border: none;
 }
 
-.form .container form input::-webkit-input-placeholder {
+.form__field input::-webkit-input-placeholder {
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -4108,7 +4113,7 @@ p:not(:last-of-type) {
   opacity: 0.5;
 }
 
-.form .container form input::-moz-placeholder {
+.form__field input::-moz-placeholder {
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -4116,7 +4121,7 @@ p:not(:last-of-type) {
   opacity: 0.5;
 }
 
-.form .container form input:-ms-input-placeholder {
+.form__field input:-ms-input-placeholder {
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -4124,7 +4129,7 @@ p:not(:last-of-type) {
   opacity: 0.5;
 }
 
-.form .container form input::-ms-input-placeholder {
+.form__field input::-ms-input-placeholder {
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -4132,7 +4137,7 @@ p:not(:last-of-type) {
   opacity: 0.5;
 }
 
-.form .container form input::placeholder {
+.form__field input::placeholder {
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -4140,72 +4145,67 @@ p:not(:last-of-type) {
   opacity: 0.5;
 }
 
-.form .container form input:hover {
+.form__field input:hover {
   outline: 1px solid #0266c1;
 }
 
-.form .container form input:hover::-webkit-input-placeholder {
+.form__field input:hover::-webkit-input-placeholder {
   color: #0266c1;
   opacity: 1;
 }
 
-.form .container form input:hover::-moz-placeholder {
+.form__field input:hover::-moz-placeholder {
   color: #0266c1;
   opacity: 1;
 }
 
-.form .container form input:hover:-ms-input-placeholder {
+.form__field input:hover:-ms-input-placeholder {
   color: #0266c1;
   opacity: 1;
 }
 
-.form .container form input:hover::-ms-input-placeholder {
+.form__field input:hover::-ms-input-placeholder {
   color: #0266c1;
   opacity: 1;
 }
 
-.form .container form input:hover::placeholder {
+.form__field input:hover::placeholder {
   color: #0266c1;
   opacity: 1;
 }
 
-.form .container form input:not(:disabled):focus,
-.form .container form input:not(:disabled):active {
+.form__field input:not(:disabled):focus,
+.form__field input:not(:disabled):active {
   outline: 1px solid #1c3374;
 }
 
-.form .container form input:not(:disabled):focus::-webkit-input-placeholder,
-.form .container form input:not(:disabled):active::-webkit-input-placeholder {
+.form__field input:not(:disabled):focus::-webkit-input-placeholder,
+.form__field input:not(:disabled):active::-webkit-input-placeholder {
   opacity: 0;
 }
 
-.form .container form input:not(:disabled):focus::-moz-placeholder,
-.form .container form input:not(:disabled):active::-moz-placeholder {
+.form__field input:not(:disabled):focus::-moz-placeholder,
+.form__field input:not(:disabled):active::-moz-placeholder {
   opacity: 0;
 }
 
-.form .container form input:not(:disabled):focus:-ms-input-placeholder,
-.form .container form input:not(:disabled):active:-ms-input-placeholder {
+.form__field input:not(:disabled):focus:-ms-input-placeholder,
+.form__field input:not(:disabled):active:-ms-input-placeholder {
   opacity: 0;
 }
 
-.form .container form input:not(:disabled):focus::-ms-input-placeholder,
-.form .container form input:not(:disabled):active::-ms-input-placeholder {
+.form__field input:not(:disabled):focus::-ms-input-placeholder,
+.form__field input:not(:disabled):active::-ms-input-placeholder {
   opacity: 0;
 }
 
-.form .container form input:not(:disabled):focus::placeholder,
-.form .container form input:not(:disabled):active::placeholder {
+.form__field input:not(:disabled):focus::placeholder,
+.form__field input:not(:disabled):active::placeholder {
   opacity: 0;
 }
 
-.form .container form input:disabled {
+.form__field input:disabled {
   border: 1px solid rgba(2, 102, 193, 0.1);
-}
-
-.form .container form button {
-  width: 238px;
-  padding: 23px 9px;
 }
 
 .form__field.is-invalid input,
@@ -4857,12 +4857,6 @@ p:not(:last-of-type) {
     max-width: 266px;
   }
 
-  .form .container form input {
-    width: 100%;
-    padding: 16px 14px;
-    letter-spacing: -1.1px;
-  }
-
   .form .container form button {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
@@ -4870,6 +4864,12 @@ p:not(:last-of-type) {
     width: 100%;
     margin-top: 7px;
     padding: 19px 9px;
+  }
+
+  .form__field input {
+    width: 100%;
+    padding: 16px 14px;
+    letter-spacing: -1.1px;
   }
 
   .contacts .container {

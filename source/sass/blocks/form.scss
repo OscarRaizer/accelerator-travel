@@ -100,49 +100,6 @@
         width: 100%;
       }
 
-      input {
-        width: 340px;
-        padding: 23px 30px;
-        border: none;
-
-        @include vp-1199 {
-          width: 100%;
-          padding: 16px 14px;
-          letter-spacing: -1.1px;
-        }
-
-        &::placeholder {
-          font-size: 16px;
-          font-style: normal;
-          font-weight: 400;
-          line-height: 16px;
-          opacity: 0.5;
-        }
-
-        &:hover {
-          outline: 1px solid $color-button-default;
-
-          &::placeholder {
-            color: $color-button-default;
-            opacity: 1;
-          }
-        }
-
-        &:not(:disabled):focus,
-        &:not(:disabled):active {
-          &::placeholder {
-            opacity: 0;
-          }
-
-          outline: 1px solid #1c3374;
-        }
-
-        &:disabled {
-          border: 1px solid rgba(2, 102, 193, 0.1);
-        }
-      }
-
-
       button {
         width: 238px;
         padding: 23px 9px;
@@ -164,9 +121,49 @@
 }
 
 .form__field {
+  input {
+    width: 340px;
+    padding: 23px 30px;
+    border: none;
+
+    @include vp-1199 {
+      width: 100%;
+      padding: 16px 14px;
+      letter-spacing: -1.1px;
+    }
+
+    &::placeholder {
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 16px;
+      opacity: 0.5;
+    }
+
+    &:hover {
+      outline: 1px solid $color-button-default;
+
+      &::placeholder {
+        color: $color-button-default;
+        opacity: 1;
+      }
+    }
+
+    &:not(:disabled):focus,
+    &:not(:disabled):active {
+      &::placeholder {
+        opacity: 0;
+      }
+
+      outline: 1px solid #1c3374;
+    }
+
+    &:disabled {
+      border: 1px solid rgba(2, 102, 193, 0.1);
+    }
+  }
 
   &.is-invalid {
-
     input,
     input:hover,
     input:focus {

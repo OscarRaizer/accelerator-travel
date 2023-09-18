@@ -63,5 +63,8 @@
   },
   "engines": {
     "node": ">=16.15.1"
+  },
+  "dependencies": {
+    "eslint-auto-fix": "^1.0.4"
   }
 }

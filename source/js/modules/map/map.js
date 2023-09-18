@@ -16,7 +16,7 @@ function initLeaflet() {
   const mapContainer = document.querySelector('#map');
 
   if (mapContainer) {
-    const map = new L.map('map', mapOptions);
+    const map = new L.Map('map', mapOptions);
 
     const layer = new L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png');
 

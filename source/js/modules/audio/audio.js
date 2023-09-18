@@ -6,7 +6,7 @@ const progress = document.querySelector('.player__progress');
 const title = document.querySelector('.player__song');
 const imgBtn = document.querySelector('.player__btn--play img');
 const currentDuration = document.querySelector('.player__duration-current');
-const totalDuration = document.querySelector('.player__duration-total');
+// const totalDuration = document.querySelector('.player__duration-total');
 
 function initAudio() {
   if (!player) {
@@ -42,7 +42,7 @@ function initAudio() {
   });
 
   function updateProgress(evt) {
-    const { duration, currentTime } = evt.srcElement;
+    const {duration, currentTime} = evt.srcElement;
     const progressPercent = currentTime / duration * 100;
     progress.style.width = `${progressPercent}%`;
     currentDuration.innerHTML = timeFormat(currentTime);

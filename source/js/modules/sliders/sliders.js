@@ -1,3 +1,4 @@
+// import {init} from 'browser-sync';
 import Swiper from '../../vendor/swiper';
 
 function initSliders() {
@@ -19,6 +20,8 @@ function initSliders() {
       clickable: true,
     },
   });
+
+  heroSlider.init();
 
   const nextToursSlider = new Swiper('.next-tours__slider', {
     direction: 'horizontal',
@@ -46,6 +49,8 @@ function initSliders() {
     },
   });
 
+  nextToursSlider.init();
+
   const trainingSlider = new Swiper('.training__slider', {
     direction: 'horizontal',
     slidesPerView: 4,
@@ -72,6 +77,8 @@ function initSliders() {
     },
   });
 
+  trainingSlider.init();
+
   const reviewsSlider = new Swiper('.reviews__slider', {
     direction: 'horizontal',
     slidesPerView: 1.4,
@@ -97,6 +104,8 @@ function initSliders() {
       prevEl: '.reviews__slider-prev',
     },
   });
+
+  reviewsSlider.init();
 
   const desktopWidth = window.matchMedia('(min-width: 1200px)');
   const advantagesSlider = document.querySelector('.advantages__slider');
@@ -155,6 +164,8 @@ function initSliders() {
       prevEl: '.gallery__slider-prev',
     },
   });
+
+  gallerySlider.init();
 }
 
 export default initSliders;

@@ -53,44 +53,44 @@
     @include vp-767 {
       gap: 7px 12px;
     }
+  }
 
-    dt {
-      color: $color-default-white;
+  dt {
+    color: $color-default-white;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 100%;
+  }
+
+  dd {
+    color: $color-default-white;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 13px;
+    margin: 0;
+
+    @include vp-767 {
       font-size: 12px;
-      font-style: normal;
-      font-weight: 300;
-      line-height: 100%;
     }
 
-    dd {
-      color: $color-default-white;
-      font-size: 13px;
-      font-style: normal;
-      font-weight: 700;
-      line-height: 13px;
-      margin: 0;
-
-      @include vp-767 {
-        font-size: 12px;
-      }
-
-      &:first-of-type {
-        position: relative;
-        background-image: url("../img/sprite/icon-star-border.svg");
-        width: 76px;
-        height: 14px;
-      }
-
-      .next-tour__rating {
-        position: absolute;
-        top: 0;
-        content: "";
-        display: block;
-        background-image: url("../img/sprite/icon-star.svg");
-        width: 15px;
-        height: 13px;
-      }
+    &:first-of-type {
+      position: relative;
+      background-image: url("../img/sprite/icon-star-border.svg");
+      width: 76px;
+      height: 14px;
     }
+  }
+
+  .next-tour__rating {
+    position: absolute;
+    top: 0;
+    content: "";
+    display: block;
+    background-image: url("../img/sprite/icon-star.svg");
+    width: 15px;
+    height: 13px;
   }
 }
 

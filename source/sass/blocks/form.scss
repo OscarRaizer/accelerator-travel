@@ -29,93 +29,93 @@
       padding-top: 179px;
       padding-bottom: 175px;
     }
+  }
 
-    h2 {
-      font-size: 35px;
+  h2 {
+    font-size: 35px;
+    font-weight: 800;
+    line-height: 35px;
+    margin: 0;
+    margin-bottom: 16px;
+    padding-right: 17px;
+
+    @include vp-1199 {
+      font-size: 25px;
+      font-style: normal;
       font-weight: 800;
-      line-height: 35px;
-      margin: 0;
-      margin-bottom: 16px;
-      padding-right: 17px;
-
-      @include vp-1199 {
-        font-size: 25px;
-        font-style: normal;
-        font-weight: 800;
-        line-height: 25px;
-        padding-right: 0;
-        margin-bottom: 18px;
-      }
-
-      @include vp-767 {
-        font-size: 22px;
-        font-style: normal;
-        font-weight: 800;
-        line-height: 22px;
-        margin-bottom: 14px;
-      }
+      line-height: 25px;
+      padding-right: 0;
+      margin-bottom: 18px;
     }
 
-    p {
-      font-size: 16px;
+    @include vp-767 {
+      font-size: 22px;
+      font-style: normal;
+      font-weight: 800;
+      line-height: 22px;
+      margin-bottom: 14px;
+    }
+  }
+
+  p {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    margin: 0;
+    margin-bottom: 42px;
+    padding-right: 17px;
+
+    @include vp-1199 {
+      display: inline-block;
+      padding-right: 0;
+      width: 295px;
+      margin-bottom: 30px;
+    }
+
+    @include vp-767 {
+      font-size: 12px;
       font-style: normal;
       font-weight: 400;
-      line-height: 24px;
-      margin: 0;
-      margin-bottom: 42px;
-      padding-right: 17px;
+      line-height: 18px;
+      margin-bottom: 25px;
+    }
+  }
 
-      @include vp-1199 {
-        display: inline-block;
-        padding-right: 0;
-        width: 295px;
-        margin-bottom: 30px;
-      }
+  form {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-content: center;
 
-      @include vp-767 {
-        font-size: 12px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 18px;
-        margin-bottom: 25px;
-      }
+    @include vp-1199 {
+      flex-direction: column;
+      gap: 7px;
+      justify-content: center;
+      margin: 0 auto;
+      max-width: 266px;
     }
 
-    form {
-      display: flex;
-      gap: 30px;
+    @include vp-767 {
+      max-width: none;
+      width: 100%;
+    }
+  }
+
+  .form__button {
+    width: 238px;
+    padding: 23px 9px;
+
+    @include vp-1199 {
       justify-content: center;
-      align-content: center;
+      width: 100%;
+      margin-top: 7px;
+      padding: 19px 9px;
+    }
 
-      @include vp-1199 {
-        flex-direction: column;
-        gap: 7px;
-        justify-content: center;
-        margin: 0 auto;
-        max-width: 266px;
-      }
-
-      @include vp-767 {
-        max-width: none;
-        width: 100%;
-      }
-
-      button {
-        width: 238px;
-        padding: 23px 9px;
-
-        @include vp-1199 {
-          justify-content: center;
-          width: 100%;
-          margin-top: 7px;
-          padding: 19px 9px;
-        }
-
-        @include vp-767 {
-          margin-top: 2px;
-          padding: 16px 9px;
-        }
-      }
+    @include vp-767 {
+      margin-top: 2px;
+      padding: 16px 9px;
     }
   }
 }

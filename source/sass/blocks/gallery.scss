@@ -42,10 +42,11 @@
 .gallery__title {
   padding-left: 120px;
   margin-bottom: 25px;
+  position: relative;
 
   @include vp-1199 {
     padding-left: 45px;
-    margin-bottom: 24px;
+    margin-bottom: 14px;
   }
 
   @include vp-767 {
@@ -53,16 +54,44 @@
     margin-bottom: 14px;
   }
 
-  span {
-    left: 310px;
-    transform: translate(-50%, -25%);
+  h2 {
+    margin: 0;
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 35px;
+    color: $color-elephant;
 
     @include vp-1199 {
-      left: 185px;
+      font-size: 25px;
     }
 
     @include vp-767 {
-      left: 106px;
+      width: 156px;
+      font-size: 22px;
+      line-height: 22px;
+    }
+  }
+
+  &::after {
+    content: "Фотогалерея";
+    position: absolute;
+    top: 0;
+    left: 8%;
+    transform: translate(0, -25%);
+    font-weight: 800;
+    font-size: 55px;
+    line-height: 55px;
+    opacity: 0.03;
+
+    @include vp-1199 {
+      font-size: 40px;
+      line-height: 40px;
+    }
+
+    @include vp-767 {
+      font-size: 26px;
+      line-height: 26px;
     }
   }
 }

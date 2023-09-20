@@ -6,6 +6,27 @@
   z-index: 30;
   color: $color-default-white;
 
+
+  .container {
+    padding-top: 40px;
+    display: grid;
+    grid-template-columns: 205px 1fr auto;
+    grid-template-rows: 1fr;
+    flex-direction: row;
+    align-items: center;
+    gap: 0 20px;
+
+    @include vp-1199 {
+      grid-template-columns: 1fr 144px 1fr;
+      padding-top: 30px;
+    }
+
+    @include vp-767 {
+      padding-top: 16px;
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
   &.is-open {
     background-color: $color-default-white;
     color: $color-default-black;
@@ -21,16 +42,16 @@
       @include vp-767 {
         gap: 0;
       }
+    }
 
-      button {
-        background-image: url("../img/sprite/icon-burger-menu-open.svg");
-        background-position: center;
-        background-repeat: no-repeat;
-      }
+    .header__burger {
+      background-image: url("../img/sprite/icon-burger-menu-open.svg");
+      background-position: center;
+      background-repeat: no-repeat;
+    }
 
-      .header__tel {
-        color: $color-default-black;
-      }
+    .header__tel {
+      color: $color-default-black;
     }
 
     .header__nav {
@@ -74,122 +95,102 @@
   }
 }
 
-.header .container {
-  padding-top: 40px;
-  display: grid;
-  grid-template-columns: 205px 1fr auto;
-  grid-template-rows: 1fr;
-  flex-direction: row;
-  align-items: center;
-  gap: 0 20px;
+.header__logo {
+  grid-column: 1/ 2;
 
   @include vp-1199 {
-    grid-template-columns: 1fr 144px 1fr;
-    padding-top: 30px;
+    justify-self: center;
+    grid-row: 1 / 2;
+    grid-column: 2 / 3;
   }
 
   @include vp-767 {
-    padding-top: 16px;
-    grid-template-columns: repeat(2, 1fr);
+    justify-self: flex-end;
   }
 
-  nav {
-    grid-column: 2 / 3;
+  svg {
+    width: 205px;
+    height: 62px;
 
-    ul {
-      display: flex;
-      justify-content: center;
-      padding: 0;
-      margin: 0;
-      flex-direction: row;
-      list-style-type: none;
-      gap: 28px;
-      margin-top: -5px;
-
-      @include vp-1199 {
-        display: none;
-      }
+    @include vp-1199 {
+      width: 144px;
+      height: 44px;
     }
 
-    a {
+    @include vp-767 {
+      width: 112px;
+      height: 34px;
+    }
+  }
+}
+
+.header__nav {
+  grid-column: 2 / 3;
+
+  ul {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    flex-direction: row;
+    list-style-type: none;
+    gap: 28px;
+    margin-top: -5px;
+
+    @include vp-1199 {
+      display: none;
+    }
+  }
+
+  a {
+    color: $color-default-white;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+    padding: 2px;
+
+    &:hover {
+      border-bottom: 1px solid $color-default-white;
+    }
+
+    &:focus {
+      border-bottom: none;
+      outline: 1px solid $color-default-white;
       color: $color-default-white;
-      font-size: 16px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 16px;
-      padding: 2px;
+    }
 
-      &:hover {
-        border-bottom: 1px solid $color-default-white;
-      }
+    &:active {
+      border: none;
+      outline: none;
+    }
 
-      &:focus {
-        border-bottom: none;
-        outline: 1px solid $color-default-white;
-        color: $color-default-white;
-      }
-
-      &:active {
-        border: none;
-        outline: none;
-      }
-
-      &:disabled,
-      &[aria-disabled="true"] {
-        color: rgba(2, 102, 193, 0.1);
-      }
+    &:disabled,
+    &[aria-disabled="true"] {
+      color: rgba(2, 102, 193, 0.1);
     }
   }
+}
 
-  .header__logo {
-    grid-column: 1/ 2;
+.header__burger {
+  display: none;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  overflow: hidden;
+  width: 26px;
+  height: 26px;
+  grid-row: 1 / 2;
 
-    @include vp-1199 {
-      justify-self: center;
-      grid-row: 1 / 2;
-      grid-column: 2 / 3;
-    }
-
-    @include vp-767 {
-      justify-self: flex-end;
-    }
-
-    svg {
-      width: 205px;
-      height: 62px;
-
-      @include vp-1199 {
-        width: 144px;
-        height: 44px;
-      }
-
-      @include vp-767 {
-        width: 112px;
-        height: 34px;
-      }
-    }
+  @include vp-1199 {
+    display: block;
+    background-image: url("../img/sprite/icon-burger-menu.svg");
+    grid-column: 1 / 2;
   }
 
-  button {
-    display: none;
-    cursor: pointer;
-    background-color: transparent;
-    border: none;
-    outline: none;
-    overflow: hidden;
-    width: 26px;
-    height: 26px;
-    grid-row: 1 / 2;
-
-    @include vp-1199 {
-      display: block;
-      background-image: url("../img/sprite/icon-burger-menu.svg");
-      grid-column: 1 / 2;
-    }
-
-    @include vp-767 {
-      margin-top: -16px;
-    }
+  @include vp-767 {
+    margin-top: -16px;
   }
 }
 

@@ -1,4 +1,3 @@
-// import {init} from 'browser-sync';
 import Swiper from '../../vendor/swiper';
 
 function initSliders() {
@@ -111,36 +110,40 @@ function initSliders() {
   const advantagesSlider = document.querySelector('.advantages__slider');
   let advantagesSwiper;
 
-  function desktopAdvantagesSlider() {
-    if (desktopWidth.matches && advantagesSlider.dataset.desktop === 'false') {
-      advantagesSwiper = new Swiper('.advantages__slider', {
-        direction: 'horizontal',
-        slidesPerView: 3.6,
-        spaceBetween: 30,
-        allowTouchMove: false,
-        loop: true,
-        initialSlide: 2,
-        centeredSlides: true,
-        navigation: {
-          nextEl: '.advantages__slider-next',
-          prevEl: '.advantages__slider-prev',
-        },
-      });
+  function initDesktopAdvantagesSlider() {
+    // Проверка наличия элемента .advantages__slider
+    if (advantagesSlider) {
+      if (desktopWidth.matches && advantagesSlider.dataset.desktop === 'false') {
+        advantagesSwiper = new Swiper('.advantages__slider', {
+          direction: 'horizontal',
+          slidesPerView: 3.6,
+          spaceBetween: 30,
+          allowTouchMove: false,
+          loop: true,
+          initialSlide: 2,
+          centeredSlides: true,
+          navigation: {
+            nextEl: '.advantages__slider-next',
+            prevEl: '.advantages__slider-prev',
+          },
+        });
 
-      advantagesSlider.dataset.desktop = 'true';
-    }
+        advantagesSlider.dataset.desktop = 'true';
+      }
 
-    if (!desktopWidth.matches) {
-      advantagesSlider.dataset.desktop = 'false';
+      if (!desktopWidth.matches) {
+        advantagesSlider.dataset.desktop = 'false';
 
-      if (advantagesSlider.classList.contains('swiper-initialized')) {
-        advantagesSwiper.destroy();
+        if (advantagesSlider.classList.contains('swiper-initialized')) {
+          advantagesSwiper.destroy();
+        }
       }
     }
   }
 
-  desktopAdvantagesSlider();
-  window.addEventListener('resize', desktopAdvantagesSlider);
+  initDesktopAdvantagesSlider();
+  window.addEventListener('resize', initDesktopAdvantagesSlider);
+
 
   const gallerySlider = new Swiper('.gallery__slider', {
     direction: 'horizontal',

@@ -1,0 +1,15 @@
+.social__link {
+  width: 30px;
+  height: 30px;
+  border: 1px solid $color-elephant-border;
+  display: block;
+  position: relative;
+
+  .social__icon {
+    display: block;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+  }
+}

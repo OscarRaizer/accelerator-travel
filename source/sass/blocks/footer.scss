@@ -19,49 +19,6 @@
     gap: 8px 0;
   }
 
-  nav {
-    grid-column: 2 / 3;
-    grid-row: 1/ 2;
-
-    @include vp-767 {
-      grid-column: auto;
-      grid-row: 2/ 3;
-    }
-
-    ul {
-      list-style-type: none;
-      display: flex;
-      gap: 29px;
-      align-items: center;
-      justify-content: center;
-      margin: 0 0 6px 69px;
-      padding: 0;
-      max-width: 610px;
-
-      @include vp-1199 {
-        justify-content: flex-end;
-        margin: 0;
-        gap: 17px;
-        margin-left: auto;
-        margin-right: 5px;
-        margin-bottom: 12px;
-      }
-
-      @include vp-767 {
-        display: grid;
-        margin-left: 2px;
-        margin-top: 0;
-        margin-bottom: 15px;
-        grid-column: 1/-1;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(3, auto);
-        grid-auto-flow: column;
-        row-gap: 5px;
-        column-gap: 27px;
-      }
-    }
-  }
-
   .footer__link {
     color: $color-default-black;
     font-size: 16px;
@@ -93,6 +50,49 @@
     &:disabled,
     &[aria-disabled="true"] {
       color: rgba(2, 102, 193, 0.1);
+    }
+  }
+}
+
+.footer__nav {
+  grid-column: 2 / 3;
+  grid-row: 1/ 2;
+
+  @include vp-767 {
+    grid-column: auto;
+    grid-row: 2/ 3;
+  }
+
+  ul {
+    list-style-type: none;
+    display: flex;
+    gap: 29px;
+    align-items: center;
+    justify-content: center;
+    margin: 0 0 6px 69px;
+    padding: 0;
+    max-width: 610px;
+
+    @include vp-1199 {
+      justify-content: flex-end;
+      margin: 0;
+      gap: 17px;
+      margin-left: auto;
+      margin-right: 5px;
+      margin-bottom: 12px;
+    }
+
+    @include vp-767 {
+      display: grid;
+      margin-left: 2px;
+      margin-top: 0;
+      margin-bottom: 15px;
+      grid-column: 1/-1;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(3, auto);
+      grid-auto-flow: column;
+      row-gap: 5px;
+      column-gap: 27px;
     }
   }
 }
@@ -167,23 +167,6 @@
 
   li {
     list-style-type: none;
-  }
-
-  .social__link {
-    width: 30px;
-    height: 30px;
-    border: 1px solid $color-elephant-border;
-
-    display: block;
-    position: relative;
-
-    .social__icon {
-      display: block;
-      position: absolute;
-      transform: translate(-50%, -50%);
-      top: 50%;
-      left: 50%;
-    }
   }
 }
 

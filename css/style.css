@@ -3519,6 +3519,15 @@ body {
   margin-bottom: 52px;
 }
 
+.training__slider p {
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+  margin: 0;
+  padding: 0;
+}
+
 .training__slider-buttons-wrapper {
   position: absolute;
   top: -70px;
@@ -3750,11 +3759,11 @@ body {
   grid-template-columns: auto 1fr;
 }
 
-.about-us .container img {
+.about-us img {
   margin-top: -35px;
 }
 
-.about-us .container h3 {
+.about-us h3 {
   margin-top: 0;
   margin-bottom: 16px;
   font-weight: 700;
@@ -3762,14 +3771,14 @@ body {
   line-height: 21px;
 }
 
-.about-us .container p {
+.about-us p {
   margin-top: 0;
   margin-bottom: 0;
   font-size: 14px;
   line-height: 22px;
 }
 
-.about-us .container p:not(:last-of-type) {
+.about-us p:not(:last-of-type) {
   margin-bottom: 30px;
 }
 
@@ -3936,13 +3945,7 @@ body {
   overflow: clip visible;
 }
 
-.advantages .advantages__title {
-  margin-bottom: 47px;
-  position: relative;
-  text-align: center;
-}
-
-.advantages .advantages__title h2 {
+.advantages h2 {
   margin: 0;
   font-size: 35px;
   font-style: normal;
@@ -3951,7 +3954,7 @@ body {
   color: #2d383f;
 }
 
-.advantages .advantages__title::after {
+.advantages::after {
   content: "Преимущества";
   position: absolute;
   top: 0;
@@ -3965,13 +3968,19 @@ body {
   opacity: 0.03;
 }
 
-.advantages .advantages__slider {
+.advantages__title {
+  margin-bottom: 47px;
+  position: relative;
+  text-align: center;
+}
+
+.advantages__slider {
   display: -ms-grid;
   display: grid;
   padding-bottom: 84px;
 }
 
-.advantages .advantages__slider-buttons-wrapper {
+.advantages__slider-buttons-wrapper {
   position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3987,7 +3996,7 @@ body {
   transform: translateX(-50%);
 }
 
-.advantages .advantages__slider-next {
+.advantages__slider-next {
   -webkit-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   transform: rotate(180deg);
@@ -4711,6 +4720,13 @@ body {
     width: 678px;
   }
 
+  .training__slider p {
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+  }
+
   .training__slider-buttons-wrapper {
     top: -59px;
   }
@@ -4796,21 +4812,21 @@ body {
     line-height: 22px;
   }
 
-  .about-us .container img {
-    margin-top: 7px;
-  }
-
   .about-us .container {
     padding-top: 0;
   }
 
-  .about-us .container h3 {
+  .about-us img {
+    margin-top: 7px;
+  }
+
+  .about-us h3 {
     margin-bottom: 14px;
     font-size: 18px;
     line-height: 18px;
   }
 
-  .about-us .container p:not(:last-of-type) {
+  .about-us p:not(:last-of-type) {
     margin-bottom: 30px;
   }
 
@@ -4887,24 +4903,24 @@ body {
     padding: 0 45px 70px;
   }
 
-  .advantages .advantages__title {
-    margin-bottom: 40px;
-  }
-
-  .advantages .advantages__title h2 {
+  .advantages h2 {
     font-size: 25px;
   }
 
-  .advantages .advantages__title::after {
+  .advantages::after {
     font-size: 40px;
     line-height: 40px;
   }
 
-  .advantages .advantages__slider {
+  .advantages__title {
+    margin-bottom: 40px;
+  }
+
+  .advantages__slider {
     padding-bottom: 0;
   }
 
-  .advantages .advantages__slider-wrapper {
+  .advantages__slider-wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -4916,7 +4932,7 @@ body {
     justify-content: center;
   }
 
-  .advantages .advantages__slider-buttons-wrapper {
+  .advantages__slider-buttons-wrapper {
     display: none;
   }
 
@@ -5420,6 +5436,13 @@ body {
     margin-bottom: 38px;
   }
 
+  .training__slider p {
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+  }
+
   .training__process {
     margin-bottom: 16px;
   }
@@ -5493,10 +5516,6 @@ body {
     background-size: 19px 19px;
   }
 
-  .about-us .container img {
-    margin-top: -9px;
-  }
-
   .about-us .container {
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
@@ -5504,17 +5523,21 @@ body {
     gap: 47px;
   }
 
-  .about-us .container h3 {
+  .about-us img {
+    margin-top: -9px;
+  }
+
+  .about-us h3 {
     margin-bottom: 16px;
     font-size: 16px;
     line-height: 16px;
   }
 
-  .about-us .container p:not(:last-of-type) {
+  .about-us p:not(:last-of-type) {
     margin-bottom: 43px;
   }
 
-  .about-us .container p {
+  .about-us p {
     font-size: 14px;
     line-height: 20px;
   }
@@ -5596,22 +5619,22 @@ body {
     padding: 0 15px 60px;
   }
 
-  .advantages .advantages__title {
-    margin-bottom: 28px;
-  }
-
-  .advantages .advantages__title h2 {
+  .advantages h2 {
     font-size: 22px;
     line-height: 22px;
   }
 
-  .advantages .advantages__title::after {
+  .advantages::after {
     font-size: 26px;
     line-height: 26px;
     left: 12%;
   }
 
-  .advantages .advantages__slider-wrapper {
+  .advantages__title {
+    margin-bottom: 28px;
+  }
+
+  .advantages__slider-wrapper {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;

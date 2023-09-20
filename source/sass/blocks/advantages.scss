@@ -15,99 +15,99 @@
     }
   }
 
-  .advantages__title {
-    margin-bottom: 47px;
-    position: relative;
-    text-align: center;
+  h2 {
+    margin: 0;
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 35px;
+    color: $color-elephant;
 
     @include vp-1199 {
-      margin-bottom: 40px;
+      font-size: 25px;
     }
 
     @include vp-767 {
-      margin-bottom: 28px;
-    }
-
-    h2 {
-      margin: 0;
-      font-size: 35px;
-      font-style: normal;
-      font-weight: 800;
-      line-height: 35px;
-      color: $color-elephant;
-
-      @include vp-1199 {
-        font-size: 25px;
-      }
-
-      @include vp-767 {
-        font-size: 22px;
-        line-height: 22px;
-      }
-    }
-
-    &::after {
-      content: "Преимущества";
-      position: absolute;
-      top: 0;
-      left: 34%;
-      transform: translate(0, -25%);
-      font-weight: 800;
-      font-size: 55px;
-      line-height: 55px;
-      opacity: 0.03;
-
-      @include vp-1199 {
-        font-size: 40px;
-        line-height: 40px;
-      }
-
-      @include vp-767 {
-        font-size: 26px;
-        line-height: 26px;
-        left: 12%;
-      }
+      font-size: 22px;
+      line-height: 22px;
     }
   }
 
-  .advantages__slider {
-    display: grid;
-    padding-bottom: 84px;
-
-    @include vp-1199 {
-      padding-bottom: 0;
-    }
-  }
-
-  .advantages__slider-wrapper {
-    @include vp-1199 {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 30px;
-      justify-content: center;
-    }
-
-    @include vp-767 {
-      flex-direction: column;
-      gap: 15px;
-    }
-  }
-
-  .advantages__slider-buttons-wrapper {
+  &::after {
+    content: "Преимущества";
     position: absolute;
-    display: flex;
-    width: fit-content;
-    gap: 5px;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
+    top: 0;
+    left: 34%;
+    transform: translate(0, -25%);
+    font-weight: 800;
+    font-size: 55px;
+    line-height: 55px;
+    opacity: 0.03;
 
     @include vp-1199 {
-      display: none;
+      font-size: 40px;
+      line-height: 40px;
+    }
+
+    @include vp-767 {
+      font-size: 26px;
+      line-height: 26px;
+      left: 12%;
     }
   }
+}
 
-  .advantages__slider-next {
-    transform: rotate(180deg);
+.advantages__title {
+  margin-bottom: 47px;
+  position: relative;
+  text-align: center;
+
+  @include vp-1199 {
+    margin-bottom: 40px;
   }
+
+  @include vp-767 {
+    margin-bottom: 28px;
+  }
+}
+
+.advantages__slider {
+  display: grid;
+  padding-bottom: 84px;
+
+  @include vp-1199 {
+    padding-bottom: 0;
+  }
+}
+
+.advantages__slider-wrapper {
+  @include vp-1199 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+  }
+
+  @include vp-767 {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+
+.advantages__slider-buttons-wrapper {
+  position: absolute;
+  display: flex;
+  width: fit-content;
+  gap: 5px;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+
+  @include vp-1199 {
+    display: none;
+  }
+}
+
+.advantages__slider-next {
+  transform: rotate(180deg);
 }

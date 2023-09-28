@@ -11,7 +11,8 @@
     fill: $color-default-white;
   }
 
-  &:hover {
+  &:hover:not(.swiper-button-disabled),
+  &:focus:not(.swiper-button-disabled) {
     background-color: $color-default-white;
     border: 1px solid $resolution-blue;
 

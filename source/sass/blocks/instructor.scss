@@ -44,10 +44,9 @@
     object-fit: cover;
 
     @include vp-1199 {
-      /* max-width: auto; */
-      /* max-width: 176px; */
       max-width: 100%;
       justify-self: center;
+      height: auto;
     }
 
     @include vp-767 {
@@ -62,6 +61,7 @@
 
   @include vp-1199 {
     padding: 15px;
+    grid-template-rows: auto;
   }
 
   @include vp-767 {

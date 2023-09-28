@@ -1,11 +1,12 @@
 .next-tours {
   position: relative;
   overflow: hidden;
+  z-index: 1;
 
   &::after {
     content: "";
     position: absolute;
-    z-index: -1;
+    z-index: 0;
     right: 0;
     top: -20px;
     width: 602px;
@@ -25,6 +26,7 @@
   padding-top: 121px;
   position: relative;
   padding-bottom: 125px;
+  z-index: 1;
 
   @include vp-1199 {
     padding-top: 82px;
@@ -107,6 +109,7 @@
   text-align: center;
   position: relative;
   gap: 12px;
+  width: fit-content;
 
   @include vp-767 {
     font-size: 14px;
@@ -128,19 +131,21 @@
 
 .next-tours__slider {
   margin-bottom: 52px;
+  z-index: 3;
 
   @include vp-1199 {
-    width: 666px;
+    width: 98%;
     margin-bottom: 51px;
   }
 
   @include vp-767 {
-    width: 290px;
+    width: 100%;
     margin-bottom: 22px;
   }
 }
 
 .next-tours__slide {
+  height: auto;
   position: relative;
   padding: 206px 20px 28px;
 

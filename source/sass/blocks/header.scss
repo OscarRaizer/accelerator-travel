@@ -6,12 +6,11 @@
   z-index: 30;
   color: $color-default-white;
 
-
   .container {
     padding-top: 40px;
     display: grid;
     grid-template-columns: 205px 1fr auto;
-    grid-template-rows: 1fr;
+    // grid-template-rows: 1fr;
     flex-direction: row;
     align-items: center;
     gap: 0 20px;
@@ -34,6 +33,38 @@
 
     @include vp-767 {
       height: 343px;
+    }
+
+    .header__overlay {
+      position: absolute;
+      z-index: 10;
+      top: 100%;
+      left: 0;
+      background-color: rgba(0, 0, 0, .5);
+      width: 100vw;
+      height: 100vh;
+    }
+
+    .header__link {
+      &:hover {
+        border-bottom: 1px solid $color-default-black;
+      }
+
+      &:focus {
+        border-bottom: none;
+        outline: 1px solid $color-default-black;
+        color: $color-default-black;
+      }
+
+      &:active {
+        border: none;
+        outline: none;
+      }
+
+      &:disabled,
+      &[aria-disabled="true"] {
+        color: rgba(2, 102, 193, 0.1);
+      }
     }
 
     .container {
@@ -195,21 +226,26 @@
 }
 
 .header__tel {
-  text-align: end;
+  // text-align: end;
   color: $color-default-white;
   font-size: 18px;
   font-style: normal;
   font-weight: 600;
   line-height: 18px;
   min-width: 142px;
-  grid-row: 1 / 2;
-  grid-column: 3 / 4;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  // grid-row: auto;
+  // grid-row: 1 / 2;
+  // grid-column: 3 / 4;
 
   @include vp-1199 {
     justify-self: flex-end;
-    grid-column: 3 / 4;
+    grid-row: 1;
+    // grid-column: 3 / 4;
     font-size: 16px;
     line-height: 16px;
+    // grid-row: 1 / -1;
   }
 
   @include vp-767 {
@@ -221,20 +257,19 @@
     justify-self: flex-end;
   }
 
-  &:hover {
-    color: $resolution-blue;
+  &:hover:not(:disabled):not([aria-disabled="true"]),
+  &:focus:not(:disabled):not([aria-disabled="true"]) {
+    color: #1c3374;
+    outline: none;
+    border: none;
   }
 
-  &:active {
-    color: $navy-blue;
+  &:active:not(:disabled):not([aria-disabled="true"]) {
+    color: $color-button-default;
   }
 
   &:disabled,
   &[aria-disabled="true"] {
     color: rgba(2, 102, 193, 0.1);
   }
-}
-
-.header__overlay {
-  display: none;
 }

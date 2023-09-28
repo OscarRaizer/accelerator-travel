@@ -5,11 +5,37 @@
   display: block;
   position: relative;
 
-  .social__icon {
-    display: block;
-    position: absolute;
-    transform: translate(-50%, -50%);
-    top: 50%;
-    left: 50%;
+  &:hover:not(:disabled):not([aria-disabled="true"]),
+  &:focus:not(:disabled):not([aria-disabled="true"]),
+  &:focus-visible:not(:disabled):not([aria-disabled="true"]) {
+    outline: 1px solid $color-icon-default;
   }
+
+  &:active:not(:disabled):not([aria-disabled="true"]) {
+    outline: 1px solid $color-icon-additional;
+    background-color: $color-icon-additional;
+
+    .social__icon {
+      fill: $color-icon-light;
+    }
+  }
+
+  &:disabled,
+  &[aria-disabled="true"] {
+    pointer-events: none;
+    outline: 1px solid rgba(45, 56, 63, 0.3);
+    border: none;
+
+    .social__icon {
+      fill: rgba(45, 56, 63, 0.3);
+    }
+  }
+}
+
+.social__icon {
+  display: block;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
 }

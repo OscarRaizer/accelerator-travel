@@ -1,9 +1,10 @@
 .training {
   background-color: $color-background-default;
+  z-index: 1;
 
   .container {
     position: relative;
-    z-index: 3;
+    z-index: 1;
   }
 
   p {
@@ -107,12 +108,40 @@
 
   @include vp-1199 {
     margin-bottom: 41px;
-    width: 678px;
+    // width: 678px;
+    width: auto;
   }
 
   @include vp-767 {
     width: 100%;
     margin-bottom: 38px;
+  }
+
+  p {
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+    margin: 0;
+    padding: 0;
+
+    @include vp-1199 {
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 18px;
+      margin: 0;
+      padding: 0;
+    }
+
+    @include vp-767 {
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 18px;
+      margin: 0;
+      padding: 0;
+    }
   }
 }
 

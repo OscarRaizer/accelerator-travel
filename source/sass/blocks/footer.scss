@@ -1,7 +1,7 @@
 .footer .container {
   padding-top: 29px;
   display: grid;
-  grid-template-columns: 205px 1fr auto;
+  grid-template-columns: auto 1fr auto;
   flex-direction: row;
   align-items: center;
   gap: 10px 20px;
@@ -72,6 +72,7 @@
     margin: 0 0 6px 69px;
     padding: 0;
     max-width: 610px;
+    flex-wrap: wrap;
 
     @include vp-1199 {
       justify-content: flex-end;
@@ -131,9 +132,20 @@
     justify-self: flex-end;
   }
 
-  &:hover {
-    color: $resolution-blue;
+  &:hover:not(:disabled):not([aria-disabled="true"]),
+  &:focus:not(:disabled):not([aria-disabled="true"]) {
+    color: #1c3374;
+    outline: none;
   }
+
+  // &:hover:not(:disabled):not([aria-disabled="true"]) {
+  //   color: #1c3374;
+  //   outline: none;
+  // }
+
+  // &:focus:not(:disabled):not([aria-disabled="true"]) {
+  //   outline: auto;
+  // }
 
   &:active {
     color: $navy-blue;
@@ -172,16 +184,21 @@
 
 
 .footer__conf-link {
+  width: fit-content;
   color: $color-elephant;
   font-size: 12px;
   font-style: normal;
   font-weight: 300;
   line-height: 100%;
   grid-row: 3 / 4;
-  grid-column: 1 / 4;
+  grid-column: 2 / 3;
   justify-content: center;
   text-align: center;
   margin-top: 9px;
+  justify-self: center;
+  margin-right: 63px;
+  // margin-right: 63px;
+
 
   @include vp-767 {
     text-align: start;

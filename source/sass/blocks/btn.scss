@@ -9,6 +9,7 @@
   border: none;
   cursor: pointer;
   transition: opacity $trans-default;
+  user-select: none;
 
   &:hover,
   &:focus {

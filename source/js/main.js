@@ -1,7 +1,7 @@
-import {iosVhFix} from './utils/ios-vh-fix';
-import {Form} from './modules/form-validate/form';
+import { iosVhFix } from './utils/ios-vh-fix';
+import { Form } from './modules/form-validate/form';
 import initSliders from './modules/sliders/sliders';
-import {Burger} from './modules/mobile-menu/burger';
+import { Burger } from './modules/mobile-menu/burger';
 import initVideo from './modules/video/video';
 import initAudio from './modules/audio/audio';
 import initLeaflet from './modules/map/map';
